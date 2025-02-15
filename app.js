@@ -42,7 +42,6 @@ scrollBtn.addEventListener("click", (e) => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// Check for saved user preference
 if (localStorage.getItem("dark-mode") === "enabled") {
   body.classList.add("dark-mode");
   themeToggle.textContent = "☀️";
@@ -51,7 +50,6 @@ if (localStorage.getItem("dark-mode") === "enabled") {
 themeToggle.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
 
-  // Save user preference
   if (body.classList.contains("dark-mode")) {
     localStorage.setItem("dark-mode", "enabled");
     themeToggle.textContent = "☀️";
